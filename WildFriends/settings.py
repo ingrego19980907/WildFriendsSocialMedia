@@ -16,7 +16,11 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+SECRET_KEY = "django-insecure-m1p6_kv%6db1ww57uefatv%5ck3gtuo#58=o(&ge%y$&02b1f_"
 
+DEBUG = True
+
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -118,9 +122,3 @@ MEDIA_URL = "/media/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-
-try:
-    from local_settings import *
-except ImportError:
-    from .prod_settings import *
